@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from "@emotion/styled";
+import Chart from "./components/Chart";
+import Search from "./components/Search";
+import "./App.css";
+const App = () => {
+  
+	const Container = styled.div`
+		width: 80vw;
+		height: 65vh;
+		display: inline-flex;
+		justify-content: space-around;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		align-items: center;
+	`;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+	return (
+		<Container>
+			<Search />
+			<Chart />
+		</Container>
+	);
+};
 
 export default App;
